@@ -51,8 +51,14 @@ const Tweet = ({
   };
 
   const handleLike = async () => {
-    const newLikeCount = likeCount + 1;
-    setIsLiked(!isLiked);
+    let newLikeCount = likeCount;
+    if (isLiked) {
+      setIsLiked(!isLiked);
+      newLikeCount -= 1;
+    } else {
+      setIsLiked(!isLiked);
+      newLikeCount += 1;
+    }
     setLikeCount(newLikeCount);
 
     try {
