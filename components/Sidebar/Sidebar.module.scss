@@ -1,0 +1,274 @@
+.sidebar {
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #000;
+  font-family: 'TwitterChirp', sans-serif;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  width: auto;
+  height: 60px;
+  margin-left: 0;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1a1a1a;
+    border-radius: 50px;
+  }
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1a1a1a;
+    border-radius: 50px;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin-right: 15px; /* Adds spacing between icon and text */
+  }
+}
+
+.postButton {
+  background-color: #1da1f2;
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Adjust padding to control button width */
+  border-radius: 50px;
+  cursor: pointer;
+  width: calc(100% - 20px); /* Adjust width to control button width */
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #1991da;
+  }
+
+  /* Feather icon styling */
+  .featherIcon {
+    width: 24px;
+    height: 24px;
+    display: none; /* Hide icon by default */
+  }
+
+  /* Post text styling */
+  .postText {
+    display: inline; /* Show text by default */
+  }
+}
+
+.miniProfile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+  background-color: #16181c; /* Restore background color */
+  padding-left: 15px; /* Add padding to the left for better spacing */
+
+  &:hover {
+    background-color: #1a1a1a;
+  }
+}
+
+.avatar {
+  width: 40px;
+  text-align: center;
+
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.username {
+  font-size: 15px;
+  color: #6e767d;
+}
+
+.verifiedIcon {
+  color: #1da1f2;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.moreIcon {
+  color: #6e767d;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.profileMenu {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  left: -20px;
+  text-align: start;
+  background-color: #15181c;
+  border-radius: 10px;
+  padding: 15px 10px;
+  width: 120%;
+  border: 1px solid #313131;
+  box-shadow: -1px -1px 16px 0px rgba(100, 100, 100, 0.55);
+  z-index: 10;
+}
+
+.profileMenuItem {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #d9d9d9;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+  }
+}
+
+/* Media query for collapsing sidebar on smaller screens */
+@media (max-width: 1200px) {
+  .sidebar {
+    max-width: 80px;
+    padding: 10px;
+  }
+
+  .menuItem {
+    justify-content: center;
+    padding: 10px;
+    font-size: 0; /* Hides text */
+  }
+
+  .postButton {
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 0; /* Hide text */
+  }
+
+  .postButton .featherIcon {
+    display: inline; /* Show icon */
+  }
+
+  .postButton .postText {
+    display: none; /* Hide text */
+  }
+
+  .miniProfile {
+    width: 100%;
+    background: none;
+    justify-content: center;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .profileDetails {
+    display: none; /* Hides profile details */
+  }
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1da1f2;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+.loginButton {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+
+  &:hover {
+    background-color: #004700;
+  }
+}
