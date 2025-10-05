@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# X Clone
+
+This is a full-stack clone of the popular social media platform X (formerly known as Twitter), built with Next.js, TypeScript, and Firebase.
+
+## Live Demo
+
+[Link to your live demo]()
+
+## Features
+
+- **User Authentication:** Secure user registration, login, and logout functionality using Firebase Authentication.
+- **Real-time Feed:** A real-time feed to display, create, and delete tweets.
+- **User Profiles:** Display user information, such as avatar, name, and username.
+- **Responsive Design:** A responsive and intuitive user interface with a three-column layout (Sidebar, Main Content, Right Sidebar) using SCSS modules.
+- **Interactive UI:** Toast notifications for enhanced user feedback.
+- **Social Features:** "Who to follow" suggestions and a "Trending" section to enhance user engagement.
+- **State Management:** Application-wide state management for authentication using React Context.
+
+## Technologies Used
+
+- **Frontend:**
+  - [Next.js](https://nextjs.org/)
+  - [React](https://reactjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [SCSS Modules](https://github.com/css-modules/css-modules)
+  - [react-icons](https://react-icons.github.io/react-icons/)
+- **Backend:**
+  - [Firebase](https://firebase.google.com/)
+    - Firebase Authentication
+    - Firestore
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (v18.x or later)
+- npm, yarn, or pnpm
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Clone the repo**
+    ```sh
+    git clone https://github.com/your_username/x-clone.git
+    ```
+2.  **Install NPM packages**
+    ```sh
+    npm install
+    ```
+3.  **Set up environment variables**
 
-## Learn More
+    Create a `.env.local` file in the root of your project and add the following environment variables. You can get these from your Firebase project settings.
 
-To learn more about Next.js, take a look at the following resources:
+    ```
+    NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+    NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4.  **Run the development server**
+    ```sh
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deploy on Vercel
+## Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Login Page | Home Page |
+| :---: | :---: |
+| ![Login Page](https://via.placeholder.com/400x300.png?text=Login+Page) | ![Home Page](https://via.placeholder.com/400x300.png?text=Home+Page) |
+| **Signup Page** | **Tweet Composer** |
+| ![Signup Page](https://via.placeholder.com/400x300.png?text=Signup+Page) | ![Tweet Composer](https://via.placeholder.com/400x300.png?text=Tweet+Composer) |
