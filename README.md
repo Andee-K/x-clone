@@ -2,9 +2,8 @@
 
 This is a full-stack clone of the popular social media platform X (formerly known as Twitter), built with Next.js, TypeScript, and Firebase.
 
-## Images
+## Home Page Example
 
-Home Page
 <img width="968" height="948" alt="Screenshot 2025-10-05 at 1 57 26 PM" src="https://github.com/user-attachments/assets/445d2dce-5f39-4207-b2ab-858297298e99" />
 
 ## Features
